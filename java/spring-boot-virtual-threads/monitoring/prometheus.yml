@@ -1,0 +1,18 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: app-no-vt
+    static_configs:
+      - targets: ['app-no-vt:8080']
+    metrics_path: /actuator/prometheus
+
+  - job_name: app-vt
+    static_configs:
+      - targets: ['app-vt:8080']
+    metrics_path: /actuator/prometheus
+
+  - job_name: cadvisor
+    static_configs:
+      - targets: ['cadvisor:8080']

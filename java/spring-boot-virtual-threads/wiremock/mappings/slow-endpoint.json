@@ -1,0 +1,18 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/api/downstream"
+      },
+      "response": {
+        "status": 200,
+        "fixedDelayMilliseconds": 200,
+        "body": "{\"message\": \"ok\"}",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  ]
+}
