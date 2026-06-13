@@ -1,0 +1,23 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: app-mvc
+    static_configs:
+      - targets: ['app-mvc:8080']
+    metrics_path: /actuator/prometheus
+
+  - job_name: app-mvc-vt
+    static_configs:
+      - targets: ['app-mvc-vt:8080']
+    metrics_path: /actuator/prometheus
+
+  - job_name: app-webflux
+    static_configs:
+      - targets: ['app-webflux:8080']
+    metrics_path: /actuator/prometheus
+
+  - job_name: cadvisor
+    static_configs:
+      - targets: ['cadvisor:8080']
